@@ -4,7 +4,7 @@ echo 'YOU WILL ALSO NEED A PIN LOCKED SIM CARD READY. DO NOT INSERT IT YET!'
 read -p "PRESS ENTER ONCE YOU HAVE REGISTERED YOUR SERIAL AND HAVE A PIN LOCKED SIM"
 rm ~/.ssh/known_hosts >/dev/null 2>&1
 pgrep -f 'tcprelay.py' | xargs kill >/dev/null 2>&1
-python iphonessh/python-client/tcprelay.py -t 44:2222 &
+python3 iphonessh/python-client/tcprelay.py -t 44:2222 &
 sleep 1
 while true ; do 
   result=$(ssh -p 2222 -o BatchMode=yes -o ConnectTimeout=1 root@localhost echo ok 2>&1 | grep Connection) # -n shows line number
