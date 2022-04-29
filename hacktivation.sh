@@ -103,7 +103,7 @@ if [ $ch = 1 ]; then
 echo "deb https://assets.checkra.in/debian /" | sudo tee -a /etc/apt/sources.list
 apt-key adv --fetch-keys https://assets.checkra.in/debian/archive.key
 apt update
-apt install -y python libtool-bin libcurl4-openssl-dev libplist-dev libzip-dev openssl libssl-dev  libcurl4-openssl-dev libimobiledevice-dev libusb-1.0-0-dev libreadline-dev build-essential git make autoconf automake libxml2-dev libtool pkg-config checkra1n sshpass checkinstall
+apt install -y python python2 python3 sshpass  libtool-bin libcurl4-openssl-dev libplist-dev libzip-dev openssl libssl-dev  libcurl4-openssl-dev libimobiledevice-6 libimobiledevice-dev libusb-1.0-0-dev libreadline-dev build-essential git make autoconf automake libxml2-dev libtool pkg-config checkra1n sshpass checkinstall
 git clone 'https://github.com/libimobiledevice/libirecovery'
 git clone 'https://github.com/libimobiledevice/libideviceactivation.git'
 git clone 'https://github.com/libimobiledevice/idevicerestore'
